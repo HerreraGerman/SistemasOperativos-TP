@@ -1,149 +1,149 @@
-Run 1 of 5:
-Raw process list:
+Ejecucion 1 de 5:
+Lista de procesos sin programar:
 +-----------+---------+-------+
 | Process   | Arrival | Burst |
 +-----------+---------+-------+
-| Process 1 |       2 |     2 |
-| Process 2 |       0 |     9 |
-| Process 3 |       4 |     8 |
-| Process 4 |       7 |     1 |
-| Process 5 |       5 |     4 |
+| Process 1 |       3 |     2 |
+| Process 2 |       4 |     9 |
+| Process 3 |       4 |     4 |
+| Process 4 |       7 |    10 |
+| Process 5 |       7 |     7 |
 +-----------+---------+-------+
 
-SJF schedule metrics:
+Métricas de la programación SJF:
 +-----------+---------+-------+-------+--------+------+------------+----------+
-| Process   | Arrival | Burst | Start | Finish | Wait | Turnaround | Response |
+| Proceso   | Llegada | Ráfaga | Inicio |  Final | Espera | Turnaround | Respuesta |
 +-----------+---------+-------+-------+--------+------+------------+----------+
-| Process 2 |       0 |     9 |     0 |      9 |    0 |          9 |        0 |
-| Process 4 |       7 |     1 |     9 |     10 |    2 |          3 |        2 |
-| Process 1 |       2 |     2 |    10 |     12 |    8 |         10 |        8 |
-| Process 5 |       5 |     4 |    12 |     16 |    7 |         11 |        7 |
-| Process 3 |       4 |     8 |    16 |     24 |   12 |         20 |       12 |
+| Process 1 |       3 |     2 |     3 |      5 |    0 |          2 |        0 |
+| Process 3 |       4 |     4 |     5 |      9 |    1 |          5 |        1 |
+| Process 5 |       7 |     7 |     9 |     16 |    2 |          9 |        2 |
+| Process 2 |       4 |     9 |    16 |     25 |   12 |         21 |       12 |
+| Process 4 |       7 |    10 |    25 |     35 |   18 |         28 |       18 |
 +-----------+---------+-------+-------+--------+------+------------+----------+
 
-Summary:
-Average waiting time: 5.80
-Average turnaround time: 10.60
-Total idle time: 0
-Makespan: 24
+Resumen:
+Tiempo promedio de espera: 6.60
+Tiempo promedio de turnaround: 13.00
+Tiempo total de inactividad: 0
+Makespan: 32
 
 
-Run 2 of 5:
-Raw process list:
+Ejecucion 2 de 5:
+Lista de procesos sin programar:
 +-----------+---------+-------+
 | Process   | Arrival | Burst |
 +-----------+---------+-------+
-| Process 1 |       4 |     7 |
-| Process 2 |      10 |     4 |
-| Process 3 |       9 |     7 |
-| Process 4 |       1 |     6 |
-| Process 5 |       6 |     7 |
+| Process 1 |       2 |    10 |
+| Process 2 |       7 |    10 |
+| Process 3 |       3 |     1 |
+| Process 4 |       2 |     6 |
+| Process 5 |       9 |     4 |
 +-----------+---------+-------+
 
-SJF schedule metrics:
+Métricas de la programación SJF:
 +-----------+---------+-------+-------+--------+------+------------+----------+
-| Process   | Arrival | Burst | Start | Finish | Wait | Turnaround | Response |
+| Proceso   | Llegada | Ráfaga | Inicio |  Final | Espera | Turnaround | Respuesta |
 +-----------+---------+-------+-------+--------+------+------------+----------+
-| Process 4 |       1 |     6 |     1 |      7 |    0 |          6 |        0 |
-| Process 1 |       4 |     7 |     7 |     14 |    3 |         10 |        3 |
-| Process 2 |      10 |     4 |    14 |     18 |    4 |          8 |        4 |
-| Process 5 |       6 |     7 |    18 |     25 |   12 |         19 |       12 |
-| Process 3 |       9 |     7 |    25 |     32 |   16 |         23 |       16 |
+| Process 4 |       2 |     6 |     2 |      8 |    0 |          6 |        0 |
+| Process 3 |       3 |     1 |     8 |      9 |    5 |          6 |        5 |
+| Process 5 |       9 |     4 |     9 |     13 |    0 |          4 |        0 |
+| Process 1 |       2 |    10 |    13 |     23 |   11 |         21 |       11 |
+| Process 2 |       7 |    10 |    23 |     33 |   16 |         26 |       16 |
 +-----------+---------+-------+-------+--------+------+------------+----------+
 
-Summary:
-Average waiting time: 7.00
-Average turnaround time: 13.20
-Total idle time: 0
+Resumen:
+Tiempo promedio de espera: 6.40
+Tiempo promedio de turnaround: 12.60
+Tiempo total de inactividad: 0
 Makespan: 31
 
 
-Run 3 of 5:
-Raw process list:
+Ejecucion 3 de 5:
+Lista de procesos sin programar:
 +-----------+---------+-------+
 | Process   | Arrival | Burst |
 +-----------+---------+-------+
-| Process 1 |       8 |     3 |
-| Process 2 |       9 |     3 |
-| Process 3 |       4 |     9 |
-| Process 4 |      10 |     3 |
-| Process 5 |       3 |     9 |
+| Process 1 |       1 |     3 |
+| Process 2 |       8 |     9 |
+| Process 3 |       2 |     1 |
+| Process 4 |       2 |     3 |
+| Process 5 |       1 |     5 |
 +-----------+---------+-------+
 
-SJF schedule metrics:
+Métricas de la programación SJF:
 +-----------+---------+-------+-------+--------+------+------------+----------+
-| Process   | Arrival | Burst | Start | Finish | Wait | Turnaround | Response |
+| Proceso   | Llegada | Ráfaga | Inicio |  Final | Espera | Turnaround | Respuesta |
 +-----------+---------+-------+-------+--------+------+------------+----------+
-| Process 5 |       3 |     9 |     3 |     12 |    0 |          9 |        0 |
-| Process 1 |       8 |     3 |    12 |     15 |    4 |          7 |        4 |
-| Process 2 |       9 |     3 |    15 |     18 |    6 |          9 |        6 |
-| Process 4 |      10 |     3 |    18 |     21 |    8 |         11 |        8 |
-| Process 3 |       4 |     9 |    21 |     30 |   17 |         26 |       17 |
+| Process 1 |       1 |     3 |     1 |      4 |    0 |          3 |        0 |
+| Process 3 |       2 |     1 |     4 |      5 |    2 |          3 |        2 |
+| Process 4 |       2 |     3 |     5 |      8 |    3 |          6 |        3 |
+| Process 5 |       1 |     5 |     8 |     13 |    7 |         12 |        7 |
+| Process 2 |       8 |     9 |    13 |     22 |    5 |         14 |        5 |
 +-----------+---------+-------+-------+--------+------+------------+----------+
 
-Summary:
-Average waiting time: 7.00
-Average turnaround time: 12.40
-Total idle time: 0
+Resumen:
+Tiempo promedio de espera: 3.40
+Tiempo promedio de turnaround: 7.60
+Tiempo total de inactividad: 0
+Makespan: 21
+
+
+Ejecucion 4 de 5:
+Lista de procesos sin programar:
++-----------+---------+-------+
+| Process   | Arrival | Burst |
++-----------+---------+-------+
+| Process 1 |      10 |     8 |
+| Process 2 |       6 |     1 |
+| Process 3 |       5 |     6 |
+| Process 4 |       0 |     4 |
+| Process 5 |       2 |     8 |
++-----------+---------+-------+
+
+Métricas de la programación SJF:
++-----------+---------+-------+-------+--------+------+------------+----------+
+| Proceso   | Llegada | Ráfaga | Inicio |  Final | Espera | Turnaround | Respuesta |
++-----------+---------+-------+-------+--------+------+------------+----------+
+| Process 4 |       0 |     4 |     0 |      4 |    0 |          4 |        0 |
+| Process 5 |       2 |     8 |     4 |     12 |    2 |         10 |        2 |
+| Process 2 |       6 |     1 |    12 |     13 |    6 |          7 |        6 |
+| Process 3 |       5 |     6 |    13 |     19 |    8 |         14 |        8 |
+| Process 1 |      10 |     8 |    19 |     27 |    9 |         17 |        9 |
++-----------+---------+-------+-------+--------+------+------------+----------+
+
+Resumen:
+Tiempo promedio de espera: 5.00
+Tiempo promedio de turnaround: 10.40
+Tiempo total de inactividad: 0
 Makespan: 27
 
 
-Run 4 of 5:
-Raw process list:
+Ejecucion 5 de 5:
+Lista de procesos sin programar:
 +-----------+---------+-------+
 | Process   | Arrival | Burst |
 +-----------+---------+-------+
-| Process 1 |       1 |     7 |
-| Process 2 |       6 |     7 |
-| Process 3 |       1 |     5 |
-| Process 4 |       4 |     7 |
-| Process 5 |       9 |     2 |
+| Process 1 |       0 |     4 |
+| Process 2 |       3 |     5 |
+| Process 3 |       9 |    10 |
+| Process 4 |       5 |     9 |
+| Process 5 |      10 |     3 |
 +-----------+---------+-------+
 
-SJF schedule metrics:
+Métricas de la programación SJF:
 +-----------+---------+-------+-------+--------+------+------------+----------+
-| Process   | Arrival | Burst | Start | Finish | Wait | Turnaround | Response |
+| Proceso   | Llegada | Ráfaga | Inicio |  Final | Espera | Turnaround | Respuesta |
 +-----------+---------+-------+-------+--------+------+------------+----------+
-| Process 3 |       1 |     5 |     1 |      6 |    0 |          5 |        0 |
-| Process 1 |       1 |     7 |     6 |     13 |    5 |         12 |        5 |
-| Process 5 |       9 |     2 |    13 |     15 |    4 |          6 |        4 |
-| Process 4 |       4 |     7 |    15 |     22 |   11 |         18 |       11 |
-| Process 2 |       6 |     7 |    22 |     29 |   16 |         23 |       16 |
-+-----------+---------+-------+-------+--------+------+------------+----------+
-
-Summary:
-Average waiting time: 7.20
-Average turnaround time: 12.80
-Total idle time: 0
-Makespan: 28
-
-
-Run 5 of 5:
-Raw process list:
-+-----------+---------+-------+
-| Process   | Arrival | Burst |
-+-----------+---------+-------+
-| Process 1 |       8 |     1 |
-| Process 2 |       5 |    10 |
-| Process 3 |       7 |     8 |
-| Process 4 |       4 |     6 |
-| Process 5 |       3 |     9 |
-+-----------+---------+-------+
-
-SJF schedule metrics:
-+-----------+---------+-------+-------+--------+------+------------+----------+
-| Process   | Arrival | Burst | Start | Finish | Wait | Turnaround | Response |
-+-----------+---------+-------+-------+--------+------+------------+----------+
-| Process 5 |       3 |     9 |     3 |     12 |    0 |          9 |        0 |
-| Process 1 |       8 |     1 |    12 |     13 |    4 |          5 |        4 |
-| Process 4 |       4 |     6 |    13 |     19 |    9 |         15 |        9 |
-| Process 3 |       7 |     8 |    19 |     27 |   12 |         20 |       12 |
-| Process 2 |       5 |    10 |    27 |     37 |   22 |         32 |       22 |
+| Process 1 |       0 |     4 |     0 |      4 |    0 |          4 |        0 |
+| Process 2 |       3 |     5 |     4 |      9 |    1 |          6 |        1 |
+| Process 4 |       5 |     9 |     9 |     18 |    4 |         13 |        4 |
+| Process 5 |      10 |     3 |    18 |     21 |    8 |         11 |        8 |
+| Process 3 |       9 |    10 |    21 |     31 |   12 |         22 |       12 |
 +-----------+---------+-------+-------+--------+------+------------+----------+
 
-Summary:
-Average waiting time: 9.40
-Average turnaround time: 16.20
-Total idle time: 0
-Makespan: 34
+Resumen:
+Tiempo promedio de espera: 5.00
+Tiempo promedio de turnaround: 11.20
+Tiempo total de inactividad: 0
+Makespan: 31
 

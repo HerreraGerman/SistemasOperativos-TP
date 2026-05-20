@@ -27,16 +27,16 @@ public class Simulation {
             ProcessSimulation[] processes = createRandomProcesses(processCount, DEFAULT_MIN_TIME, DEFAULT_MAX_TIME, maxArrivalTime);
             ProcessSimulation[] rawProcesses = processes.clone();
 
-            String runHeader = "Run " + run + " of " + runCount + ":";
+            String runHeader = "Ejecucion " + run + " de " + runCount + ":";
             println(report, runHeader);
 
             List<ProcessSimulation> schedule = scheduleProcesses(processes);
 
-            List<String> rawLines = ProcessResultTable.getBurstLines(rawProcesses, "Raw process list:");
+            List<String> rawLines = ProcessResultTable.getBurstLines(rawProcesses, "Lista de procesos sin programar:");
             ProcessResultTable.printLines(rawLines);
             appendLines(report, rawLines);
 
-            List<String> scheduleLines = ProcessResultTable.getScheduleLines(schedule, "SJF schedule metrics:");
+            List<String> scheduleLines = ProcessResultTable.getScheduleLines(schedule, "Métricas de la programación SJF:");
             ProcessResultTable.printLines(scheduleLines);
             appendLines(report, scheduleLines);
 
@@ -53,7 +53,7 @@ public class Simulation {
 
         Path outputFile = resolveOutputFile();
         writeReportToFile(outputFile, report.toString());
-        System.out.println("Results saved to " + outputFile.toAbsolutePath());
+        System.out.println("Resultados guardados en " + outputFile.toAbsolutePath());
     }
 
     private static ProcessSimulation[] createRandomProcesses(int count, int minTime, int maxTime, int maxArrivalTime) {
@@ -142,10 +142,10 @@ public class Simulation {
                 - schedule.get(0).getArrivalTime();
 
         List<String> summary = new ArrayList<>();
-        summary.add("Summary:");
-        summary.add(String.format("Average waiting time: %.2f", averageWaiting));
-        summary.add(String.format("Average turnaround time: %.2f", averageTurnaround));
-        summary.add("Total idle time: " + totalIdle);
+        summary.add("Resumen:");
+        summary.add(String.format("Tiempo promedio de espera: %.2f", averageWaiting));
+        summary.add(String.format("Tiempo promedio de turnaround: %.2f", averageTurnaround));
+        summary.add("Tiempo total de inactividad: " + totalIdle);
         summary.add("Makespan: " + makespan);
         summary.add("");
         return summary;
@@ -175,7 +175,7 @@ public class Simulation {
             Files.createDirectories(file.getParent());
             Files.writeString(file, content, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
         } catch (IOException e) {
-            System.err.println("Unable to write results to file: " + e.getMessage());
+            System.err.println("No se puede escribir los resultados al archivo: " + e.getMessage());
         }
     }
 }
