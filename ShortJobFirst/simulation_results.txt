@@ -1,38 +1,149 @@
-Run 1 of 3:
-Raw process times:   Sorted by Shortest Job First:
-+-----------+------+   +-----------+------+
-| Process   | Time |   | Process   | Time |
-+-----------+------+   +-----------+------+
-| Process 1 |    3 |   | Process 1 |    3 |
-| Process 2 |    6 |   | Process 3 |    3 |
-| Process 3 |    3 |   | Process 4 |    4 |
-| Process 4 |    4 |   | Process 5 |    4 |
-| Process 5 |    4 |   | Process 2 |    6 |
-+-----------+------+   +-----------+------+
+Run 1 of 5:
+Raw process list:
++-----------+---------+-------+
+| Process   | Arrival | Burst |
++-----------+---------+-------+
+| Process 1 |       2 |     2 |
+| Process 2 |       0 |     9 |
+| Process 3 |       4 |     8 |
+| Process 4 |       7 |     1 |
+| Process 5 |       5 |     4 |
++-----------+---------+-------+
+
+SJF schedule metrics:
++-----------+---------+-------+-------+--------+------+------------+----------+
+| Process   | Arrival | Burst | Start | Finish | Wait | Turnaround | Response |
++-----------+---------+-------+-------+--------+------+------------+----------+
+| Process 2 |       0 |     9 |     0 |      9 |    0 |          9 |        0 |
+| Process 4 |       7 |     1 |     9 |     10 |    2 |          3 |        2 |
+| Process 1 |       2 |     2 |    10 |     12 |    8 |         10 |        8 |
+| Process 5 |       5 |     4 |    12 |     16 |    7 |         11 |        7 |
+| Process 3 |       4 |     8 |    16 |     24 |   12 |         20 |       12 |
++-----------+---------+-------+-------+--------+------+------------+----------+
+
+Summary:
+Average waiting time: 5.80
+Average turnaround time: 10.60
+Total idle time: 0
+Makespan: 24
 
 
-Run 2 of 3:
-Raw process times:   Sorted by Shortest Job First:
-+-----------+------+   +-----------+------+
-| Process   | Time |   | Process   | Time |
-+-----------+------+   +-----------+------+
-| Process 1 |   10 |   | Process 2 |    2 |
-| Process 2 |    2 |   | Process 5 |    2 |
-| Process 3 |    5 |   | Process 4 |    3 |
-| Process 4 |    3 |   | Process 3 |    5 |
-| Process 5 |    2 |   | Process 1 |   10 |
-+-----------+------+   +-----------+------+
+Run 2 of 5:
+Raw process list:
++-----------+---------+-------+
+| Process   | Arrival | Burst |
++-----------+---------+-------+
+| Process 1 |       4 |     7 |
+| Process 2 |      10 |     4 |
+| Process 3 |       9 |     7 |
+| Process 4 |       1 |     6 |
+| Process 5 |       6 |     7 |
++-----------+---------+-------+
+
+SJF schedule metrics:
++-----------+---------+-------+-------+--------+------+------------+----------+
+| Process   | Arrival | Burst | Start | Finish | Wait | Turnaround | Response |
++-----------+---------+-------+-------+--------+------+------------+----------+
+| Process 4 |       1 |     6 |     1 |      7 |    0 |          6 |        0 |
+| Process 1 |       4 |     7 |     7 |     14 |    3 |         10 |        3 |
+| Process 2 |      10 |     4 |    14 |     18 |    4 |          8 |        4 |
+| Process 5 |       6 |     7 |    18 |     25 |   12 |         19 |       12 |
+| Process 3 |       9 |     7 |    25 |     32 |   16 |         23 |       16 |
++-----------+---------+-------+-------+--------+------+------------+----------+
+
+Summary:
+Average waiting time: 7.00
+Average turnaround time: 13.20
+Total idle time: 0
+Makespan: 31
 
 
-Run 3 of 3:
-Raw process times:   Sorted by Shortest Job First:
-+-----------+------+   +-----------+------+
-| Process   | Time |   | Process   | Time |
-+-----------+------+   +-----------+------+
-| Process 1 |    1 |   | Process 1 |    1 |
-| Process 2 |   10 |   | Process 5 |    2 |
-| Process 3 |    4 |   | Process 3 |    4 |
-| Process 4 |    8 |   | Process 4 |    8 |
-| Process 5 |    2 |   | Process 2 |   10 |
-+-----------+------+   +-----------+------+
+Run 3 of 5:
+Raw process list:
++-----------+---------+-------+
+| Process   | Arrival | Burst |
++-----------+---------+-------+
+| Process 1 |       8 |     3 |
+| Process 2 |       9 |     3 |
+| Process 3 |       4 |     9 |
+| Process 4 |      10 |     3 |
+| Process 5 |       3 |     9 |
++-----------+---------+-------+
+
+SJF schedule metrics:
++-----------+---------+-------+-------+--------+------+------------+----------+
+| Process   | Arrival | Burst | Start | Finish | Wait | Turnaround | Response |
++-----------+---------+-------+-------+--------+------+------------+----------+
+| Process 5 |       3 |     9 |     3 |     12 |    0 |          9 |        0 |
+| Process 1 |       8 |     3 |    12 |     15 |    4 |          7 |        4 |
+| Process 2 |       9 |     3 |    15 |     18 |    6 |          9 |        6 |
+| Process 4 |      10 |     3 |    18 |     21 |    8 |         11 |        8 |
+| Process 3 |       4 |     9 |    21 |     30 |   17 |         26 |       17 |
++-----------+---------+-------+-------+--------+------+------------+----------+
+
+Summary:
+Average waiting time: 7.00
+Average turnaround time: 12.40
+Total idle time: 0
+Makespan: 27
+
+
+Run 4 of 5:
+Raw process list:
++-----------+---------+-------+
+| Process   | Arrival | Burst |
++-----------+---------+-------+
+| Process 1 |       1 |     7 |
+| Process 2 |       6 |     7 |
+| Process 3 |       1 |     5 |
+| Process 4 |       4 |     7 |
+| Process 5 |       9 |     2 |
++-----------+---------+-------+
+
+SJF schedule metrics:
++-----------+---------+-------+-------+--------+------+------------+----------+
+| Process   | Arrival | Burst | Start | Finish | Wait | Turnaround | Response |
++-----------+---------+-------+-------+--------+------+------------+----------+
+| Process 3 |       1 |     5 |     1 |      6 |    0 |          5 |        0 |
+| Process 1 |       1 |     7 |     6 |     13 |    5 |         12 |        5 |
+| Process 5 |       9 |     2 |    13 |     15 |    4 |          6 |        4 |
+| Process 4 |       4 |     7 |    15 |     22 |   11 |         18 |       11 |
+| Process 2 |       6 |     7 |    22 |     29 |   16 |         23 |       16 |
++-----------+---------+-------+-------+--------+------+------------+----------+
+
+Summary:
+Average waiting time: 7.20
+Average turnaround time: 12.80
+Total idle time: 0
+Makespan: 28
+
+
+Run 5 of 5:
+Raw process list:
++-----------+---------+-------+
+| Process   | Arrival | Burst |
++-----------+---------+-------+
+| Process 1 |       8 |     1 |
+| Process 2 |       5 |    10 |
+| Process 3 |       7 |     8 |
+| Process 4 |       4 |     6 |
+| Process 5 |       3 |     9 |
++-----------+---------+-------+
+
+SJF schedule metrics:
++-----------+---------+-------+-------+--------+------+------------+----------+
+| Process   | Arrival | Burst | Start | Finish | Wait | Turnaround | Response |
++-----------+---------+-------+-------+--------+------+------------+----------+
+| Process 5 |       3 |     9 |     3 |     12 |    0 |          9 |        0 |
+| Process 1 |       8 |     1 |    12 |     13 |    4 |          5 |        4 |
+| Process 4 |       4 |     6 |    13 |     19 |    9 |         15 |        9 |
+| Process 3 |       7 |     8 |    19 |     27 |   12 |         20 |       12 |
+| Process 2 |       5 |    10 |    27 |     37 |   22 |         32 |       22 |
++-----------+---------+-------+-------+--------+------+------------+----------+
+
+Summary:
+Average waiting time: 9.40
+Average turnaround time: 16.20
+Total idle time: 0
+Makespan: 34
 

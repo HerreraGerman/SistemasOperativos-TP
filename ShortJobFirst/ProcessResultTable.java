@@ -2,30 +2,117 @@ package ShortJobFirst;
 
 public class ProcessResultTable {
 
-    public static void print(ProcessWithRandomTime[] processes, String title) {
-        java.util.List<String> lines = buildTableLines(processes, title);
+    public static java.util.List<String> getBurstLines(ProcessSimulation[] processes, String title) {
+        int nameWidth = "Process".length();
+        int arrivalWidth = "Arrival".length();
+        int burstWidth = "Burst".length();
+
+        if (processes != null) {
+            for (ProcessSimulation process : processes) {
+                if (process != null) {
+                    nameWidth = Math.max(nameWidth, process.getProcessName().length());
+                    arrivalWidth = Math.max(arrivalWidth, String.valueOf(process.getArrivalTime()).length());
+                    burstWidth = Math.max(burstWidth, String.valueOf(process.getProcessTime()).length());
+                }
+            }
+        }
+
+        String format = String.format("| %%-%ds | %%%ds | %%%ds |", nameWidth, arrivalWidth, burstWidth);
+        String border = "+" + repeat('-', nameWidth + 2) + "+" + repeat('-', arrivalWidth + 2) + "+" + repeat('-', burstWidth + 2) + "+";
+
+        java.util.List<String> lines = new java.util.ArrayList<>();
+        lines.add(title);
+        lines.add(border);
+        lines.add(String.format(format, "Process", "Arrival", "Burst"));
+        lines.add(border);
+
+        if (processes != null) {
+            for (ProcessSimulation process : processes) {
+                if (process != null) {
+                    lines.add(String.format(format,
+                            process.getProcessName(),
+                            process.getArrivalTime(),
+                            process.getProcessTime()));
+                }
+            }
+        }
+
+        lines.add(border);
+        lines.add("");
+        return lines;
+    }
+
+    public static java.util.List<String> getScheduleLines(java.util.List<ProcessSimulation> schedule, String title) {
+        int nameWidth = "Process".length();
+        int arrivalWidth = "Arrival".length();
+        int burstWidth = "Burst".length();
+        int startWidth = "Start".length();
+        int finishWidth = "Finish".length();
+        int waitingWidth = "Wait".length();
+        int turnaroundWidth = "Turnaround".length();
+        int responseWidth = "Response".length();
+
+        if (schedule != null) {
+            for (ProcessSimulation process : schedule) {
+                if (process != null) {
+                    nameWidth = Math.max(nameWidth, process.getProcessName().length());
+                    arrivalWidth = Math.max(arrivalWidth, String.valueOf(process.getArrivalTime()).length());
+                    burstWidth = Math.max(burstWidth, String.valueOf(process.getProcessTime()).length());
+                    startWidth = Math.max(startWidth, String.valueOf(process.getStartTime()).length());
+                    finishWidth = Math.max(finishWidth, String.valueOf(process.getFinishTime()).length());
+                    waitingWidth = Math.max(waitingWidth, String.valueOf(process.getWaitingTime()).length());
+                    turnaroundWidth = Math.max(turnaroundWidth, String.valueOf(process.getTurnaroundTime()).length());
+                    responseWidth = Math.max(responseWidth, String.valueOf(process.getResponseTime()).length());
+                }
+            }
+        }
+
+        String format = String.format("| %%-%ds | %%%ds | %%%ds | %%%ds | %%%ds | %%%ds | %%%ds | %%%ds |",
+                nameWidth, arrivalWidth, burstWidth, startWidth, finishWidth, waitingWidth, turnaroundWidth, responseWidth);
+        String border = "+" + repeat('-', nameWidth + 2) + "+" + repeat('-', arrivalWidth + 2) + "+" + repeat('-', burstWidth + 2)
+                + "+" + repeat('-', startWidth + 2) + "+" + repeat('-', finishWidth + 2) + "+" + repeat('-', waitingWidth + 2)
+                + "+" + repeat('-', turnaroundWidth + 2) + "+" + repeat('-', responseWidth + 2) + "+";
+
+        java.util.List<String> lines = new java.util.ArrayList<>();
+        lines.add(title);
+        lines.add(border);
+        lines.add(String.format(format, "Process", "Arrival", "Burst", "Start", "Finish", "Wait", "Turnaround", "Response"));
+        lines.add(border);
+
+        if (schedule != null) {
+            for (ProcessSimulation process : schedule) {
+                if (process != null) {
+                    lines.add(String.format(format,
+                            process.getProcessName(),
+                            process.getArrivalTime(),
+                            process.getProcessTime(),
+                            process.getStartTime(),
+                            process.getFinishTime(),
+                            process.getWaitingTime(),
+                            process.getTurnaroundTime(),
+                            process.getResponseTime()));
+                }
+            }
+        }
+
+        lines.add(border);
+        lines.add("");
+        return lines;
+    }
+
+    public static void printLines(java.util.List<String> lines) {
+        if (lines == null) {
+            return;
+        }
         for (String line : lines) {
             System.out.println(line);
         }
-        System.out.println();
     }
 
-    public static java.util.List<String> getTableLines(ProcessWithRandomTime[] processes, String title) {
-        return buildTableLines(processes, title);
-    }
-
-    public static void printSideBySide(ProcessWithRandomTime[] left, String leftTitle,
-                                       ProcessWithRandomTime[] right, String rightTitle) {
-        for (String line : getSideBySideLines(left, leftTitle, right, rightTitle)) {
-            System.out.println(line);
-        }
-        System.out.println();
-    }
-
-    public static java.util.List<String> getSideBySideLines(ProcessWithRandomTime[] left, String leftTitle,
-                                                            ProcessWithRandomTime[] right, String rightTitle) {
-        java.util.List<String> leftLines = buildTableLines(left, leftTitle);
-        java.util.List<String> rightLines = buildTableLines(right, rightTitle);
+    public static java.util.List<String> getSideBySideLines(ProcessSimulation[] left, String leftTitle,
+                                                            ProcessSimulation[] right, String rightTitle) {
+        java.util.List<String> leftLines = getBurstLines(left, leftTitle);
+        java.util.List<String> rightLines = getBurstLines(right, rightTitle);
 
         int leftWidth = 0;
         for (String line : leftLines) {
@@ -43,40 +130,6 @@ public class ProcessResultTable {
         }
         combined.add("");
         return combined;
-    }
-
-    private static java.util.List<String> buildTableLines(ProcessWithRandomTime[] processes, String title) {
-        int nameWidth = "Process".length();
-        int timeWidth = "Time".length();
-
-        if (processes != null) {
-            for (ProcessWithRandomTime process : processes) {
-                if (process != null) {
-                    nameWidth = Math.max(nameWidth, process.getProcessName().length());
-                    timeWidth = Math.max(timeWidth, String.valueOf(process.getProcessTime()).length());
-                }
-            }
-        }
-
-        String format = String.format("| %%-%ds | %%%ds |", nameWidth, timeWidth);
-        String border = "+" + repeat('-', nameWidth + 2) + "+" + repeat('-', timeWidth + 2) + "+";
-
-        java.util.List<String> lines = new java.util.ArrayList<>();
-        lines.add(title);
-        lines.add(border);
-        lines.add(String.format(format, "Process", "Time"));
-        lines.add(border);
-
-        if (processes != null) {
-            for (ProcessWithRandomTime process : processes) {
-                if (process != null) {
-                    lines.add(String.format(format, process.getProcessName(), process.getProcessTime()));
-                }
-            }
-        }
-
-        lines.add(border);
-        return lines;
     }
 
     private static String repeat(char ch, int count) {
