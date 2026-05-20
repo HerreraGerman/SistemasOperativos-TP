@@ -1,0 +1,38 @@
+Run 1 of 3:
+Raw process times:   Sorted by Shortest Job First:
++-----------+------+   +-----------+------+
+| Process   | Time |   | Process   | Time |
++-----------+------+   +-----------+------+
+| Process 1 |    3 |   | Process 1 |    3 |
+| Process 2 |    6 |   | Process 3 |    3 |
+| Process 3 |    3 |   | Process 4 |    4 |
+| Process 4 |    4 |   | Process 5 |    4 |
+| Process 5 |    4 |   | Process 2 |    6 |
++-----------+------+   +-----------+------+
+
+
+Run 2 of 3:
+Raw process times:   Sorted by Shortest Job First:
++-----------+------+   +-----------+------+
+| Process   | Time |   | Process   | Time |
++-----------+------+   +-----------+------+
+| Process 1 |   10 |   | Process 2 |    2 |
+| Process 2 |    2 |   | Process 5 |    2 |
+| Process 3 |    5 |   | Process 4 |    3 |
+| Process 4 |    3 |   | Process 3 |    5 |
+| Process 5 |    2 |   | Process 1 |   10 |
++-----------+------+   +-----------+------+
+
+
+Run 3 of 3:
+Raw process times:   Sorted by Shortest Job First:
++-----------+------+   +-----------+------+
+| Process   | Time |   | Process   | Time |
++-----------+------+   +-----------+------+
+| Process 1 |    1 |   | Process 1 |    1 |
+| Process 2 |   10 |   | Process 5 |    2 |
+| Process 3 |    4 |   | Process 3 |    4 |
+| Process 4 |    8 |   | Process 4 |    8 |
+| Process 5 |    2 |   | Process 2 |   10 |
++-----------+------+   +-----------+------+
+
