@@ -3,29 +3,29 @@ Lista de procesos sin programar:
 +-----------+---------+-------+
 | Process   | Arrival | Burst |
 +-----------+---------+-------+
-| Process 1 |       3 |     2 |
-| Process 2 |       4 |     9 |
-| Process 3 |       4 |     4 |
-| Process 4 |       7 |    10 |
-| Process 5 |       7 |     7 |
+| Process 1 |       4 |     1 |
+| Process 2 |       1 |     9 |
+| Process 3 |       6 |     6 |
+| Process 4 |       1 |     5 |
+| Process 5 |       2 |     1 |
 +-----------+---------+-------+
 
 Métricas de la programación SJF:
 +-----------+---------+-------+-------+--------+------+------------+----------+
-| Proceso   | Llegada | Ráfaga | Inicio |  Final | Espera | Turnaround | Respuesta |
+| Process   | Arrival | Burst | Start | Finish | Wait | Turnaround | Response |
 +-----------+---------+-------+-------+--------+------+------------+----------+
-| Process 1 |       3 |     2 |     3 |      5 |    0 |          2 |        0 |
-| Process 3 |       4 |     4 |     5 |      9 |    1 |          5 |        1 |
-| Process 5 |       7 |     7 |     9 |     16 |    2 |          9 |        2 |
-| Process 2 |       4 |     9 |    16 |     25 |   12 |         21 |       12 |
-| Process 4 |       7 |    10 |    25 |     35 |   18 |         28 |       18 |
+| Process 4 |       1 |     5 |     1 |      6 |    0 |          5 |        0 |
+| Process 5 |       2 |     1 |     6 |      7 |    4 |          5 |        4 |
+| Process 1 |       4 |     1 |     7 |      8 |    3 |          4 |        3 |
+| Process 3 |       6 |     6 |     8 |     14 |    2 |          8 |        2 |
+| Process 2 |       1 |     9 |    14 |     23 |   13 |         22 |       13 |
 +-----------+---------+-------+-------+--------+------+------------+----------+
 
 Resumen:
-Tiempo promedio de espera: 6.60
-Tiempo promedio de turnaround: 13.00
+Tiempo promedio de espera: 4.40
+Tiempo promedio de turnaround: 8.80
 Tiempo total de inactividad: 0
-Makespan: 32
+Makespan: 22
 
 
 Ejecucion 2 de 5:
@@ -33,29 +33,29 @@ Lista de procesos sin programar:
 +-----------+---------+-------+
 | Process   | Arrival | Burst |
 +-----------+---------+-------+
-| Process 1 |       2 |    10 |
-| Process 2 |       7 |    10 |
-| Process 3 |       3 |     1 |
-| Process 4 |       2 |     6 |
-| Process 5 |       9 |     4 |
+| Process 1 |       0 |     4 |
+| Process 2 |       0 |     9 |
+| Process 3 |       1 |     4 |
+| Process 4 |       6 |     7 |
+| Process 5 |      10 |     9 |
 +-----------+---------+-------+
 
 Métricas de la programación SJF:
 +-----------+---------+-------+-------+--------+------+------------+----------+
-| Proceso   | Llegada | Ráfaga | Inicio |  Final | Espera | Turnaround | Respuesta |
+| Process   | Arrival | Burst | Start | Finish | Wait | Turnaround | Response |
 +-----------+---------+-------+-------+--------+------+------------+----------+
-| Process 4 |       2 |     6 |     2 |      8 |    0 |          6 |        0 |
-| Process 3 |       3 |     1 |     8 |      9 |    5 |          6 |        5 |
-| Process 5 |       9 |     4 |     9 |     13 |    0 |          4 |        0 |
-| Process 1 |       2 |    10 |    13 |     23 |   11 |         21 |       11 |
-| Process 2 |       7 |    10 |    23 |     33 |   16 |         26 |       16 |
+| Process 1 |       0 |     4 |     0 |      4 |    0 |          4 |        0 |
+| Process 3 |       1 |     4 |     4 |      8 |    3 |          7 |        3 |
+| Process 4 |       6 |     7 |     8 |     15 |    2 |          9 |        2 |
+| Process 2 |       0 |     9 |    15 |     24 |   15 |         24 |       15 |
+| Process 5 |      10 |     9 |    24 |     33 |   14 |         23 |       14 |
 +-----------+---------+-------+-------+--------+------+------------+----------+
 
 Resumen:
-Tiempo promedio de espera: 6.40
-Tiempo promedio de turnaround: 12.60
+Tiempo promedio de espera: 6.80
+Tiempo promedio de turnaround: 13.40
 Tiempo total de inactividad: 0
-Makespan: 31
+Makespan: 33
 
 
 Ejecucion 3 de 5:
@@ -63,28 +63,28 @@ Lista de procesos sin programar:
 +-----------+---------+-------+
 | Process   | Arrival | Burst |
 +-----------+---------+-------+
-| Process 1 |       1 |     3 |
-| Process 2 |       8 |     9 |
-| Process 3 |       2 |     1 |
-| Process 4 |       2 |     3 |
-| Process 5 |       1 |     5 |
+| Process 1 |       6 |     3 |
+| Process 2 |       4 |     5 |
+| Process 3 |       0 |     1 |
+| Process 4 |       9 |     8 |
+| Process 5 |       9 |     1 |
 +-----------+---------+-------+
 
 Métricas de la programación SJF:
 +-----------+---------+-------+-------+--------+------+------------+----------+
-| Proceso   | Llegada | Ráfaga | Inicio |  Final | Espera | Turnaround | Respuesta |
+| Process   | Arrival | Burst | Start | Finish | Wait | Turnaround | Response |
 +-----------+---------+-------+-------+--------+------+------------+----------+
-| Process 1 |       1 |     3 |     1 |      4 |    0 |          3 |        0 |
-| Process 3 |       2 |     1 |     4 |      5 |    2 |          3 |        2 |
-| Process 4 |       2 |     3 |     5 |      8 |    3 |          6 |        3 |
-| Process 5 |       1 |     5 |     8 |     13 |    7 |         12 |        7 |
-| Process 2 |       8 |     9 |    13 |     22 |    5 |         14 |        5 |
+| Process 3 |       0 |     1 |     0 |      1 |    0 |          1 |        0 |
+| Process 2 |       4 |     5 |     4 |      9 |    0 |          5 |        0 |
+| Process 5 |       9 |     1 |     9 |     10 |    0 |          1 |        0 |
+| Process 1 |       6 |     3 |    10 |     13 |    4 |          7 |        4 |
+| Process 4 |       9 |     8 |    13 |     21 |    4 |         12 |        4 |
 +-----------+---------+-------+-------+--------+------+------------+----------+
 
 Resumen:
-Tiempo promedio de espera: 3.40
-Tiempo promedio de turnaround: 7.60
-Tiempo total de inactividad: 0
+Tiempo promedio de espera: 1.60
+Tiempo promedio de turnaround: 5.20
+Tiempo total de inactividad: 3
 Makespan: 21
 
 
@@ -93,29 +93,29 @@ Lista de procesos sin programar:
 +-----------+---------+-------+
 | Process   | Arrival | Burst |
 +-----------+---------+-------+
-| Process 1 |      10 |     8 |
-| Process 2 |       6 |     1 |
-| Process 3 |       5 |     6 |
-| Process 4 |       0 |     4 |
-| Process 5 |       2 |     8 |
+| Process 1 |       6 |     7 |
+| Process 2 |       9 |    10 |
+| Process 3 |       3 |     6 |
+| Process 4 |       0 |     7 |
+| Process 5 |       8 |     8 |
 +-----------+---------+-------+
 
 Métricas de la programación SJF:
 +-----------+---------+-------+-------+--------+------+------------+----------+
-| Proceso   | Llegada | Ráfaga | Inicio |  Final | Espera | Turnaround | Respuesta |
+| Process   | Arrival | Burst | Start | Finish | Wait | Turnaround | Response |
 +-----------+---------+-------+-------+--------+------+------------+----------+
-| Process 4 |       0 |     4 |     0 |      4 |    0 |          4 |        0 |
-| Process 5 |       2 |     8 |     4 |     12 |    2 |         10 |        2 |
-| Process 2 |       6 |     1 |    12 |     13 |    6 |          7 |        6 |
-| Process 3 |       5 |     6 |    13 |     19 |    8 |         14 |        8 |
-| Process 1 |      10 |     8 |    19 |     27 |    9 |         17 |        9 |
+| Process 4 |       0 |     7 |     0 |      7 |    0 |          7 |        0 |
+| Process 3 |       3 |     6 |     7 |     13 |    4 |         10 |        4 |
+| Process 1 |       6 |     7 |    13 |     20 |    7 |         14 |        7 |
+| Process 5 |       8 |     8 |    20 |     28 |   12 |         20 |       12 |
+| Process 2 |       9 |    10 |    28 |     38 |   19 |         29 |       19 |
 +-----------+---------+-------+-------+--------+------+------------+----------+
 
 Resumen:
-Tiempo promedio de espera: 5.00
-Tiempo promedio de turnaround: 10.40
+Tiempo promedio de espera: 8.40
+Tiempo promedio de turnaround: 16.00
 Tiempo total de inactividad: 0
-Makespan: 27
+Makespan: 38
 
 
 Ejecucion 5 de 5:
@@ -123,27 +123,27 @@ Lista de procesos sin programar:
 +-----------+---------+-------+
 | Process   | Arrival | Burst |
 +-----------+---------+-------+
-| Process 1 |       0 |     4 |
-| Process 2 |       3 |     5 |
-| Process 3 |       9 |    10 |
-| Process 4 |       5 |     9 |
-| Process 5 |      10 |     3 |
+| Process 1 |       9 |     9 |
+| Process 2 |       2 |     4 |
+| Process 3 |       5 |     1 |
+| Process 4 |       8 |     2 |
+| Process 5 |       2 |     8 |
 +-----------+---------+-------+
 
 Métricas de la programación SJF:
 +-----------+---------+-------+-------+--------+------+------------+----------+
-| Proceso   | Llegada | Ráfaga | Inicio |  Final | Espera | Turnaround | Respuesta |
+| Process   | Arrival | Burst | Start | Finish | Wait | Turnaround | Response |
 +-----------+---------+-------+-------+--------+------+------------+----------+
-| Process 1 |       0 |     4 |     0 |      4 |    0 |          4 |        0 |
-| Process 2 |       3 |     5 |     4 |      9 |    1 |          6 |        1 |
-| Process 4 |       5 |     9 |     9 |     18 |    4 |         13 |        4 |
-| Process 5 |      10 |     3 |    18 |     21 |    8 |         11 |        8 |
-| Process 3 |       9 |    10 |    21 |     31 |   12 |         22 |       12 |
+| Process 2 |       2 |     4 |     2 |      6 |    0 |          4 |        0 |
+| Process 3 |       5 |     1 |     6 |      7 |    1 |          2 |        1 |
+| Process 5 |       2 |     8 |     7 |     15 |    5 |         13 |        5 |
+| Process 4 |       8 |     2 |    15 |     17 |    7 |          9 |        7 |
+| Process 1 |       9 |     9 |    17 |     26 |    8 |         17 |        8 |
 +-----------+---------+-------+-------+--------+------+------------+----------+
 
 Resumen:
-Tiempo promedio de espera: 5.00
-Tiempo promedio de turnaround: 11.20
+Tiempo promedio de espera: 4.20
+Tiempo promedio de turnaround: 9.00
 Tiempo total de inactividad: 0
-Makespan: 31
+Makespan: 24
 

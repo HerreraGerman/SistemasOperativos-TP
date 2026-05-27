@@ -76,7 +76,7 @@ public class ProcessResultTable {
         java.util.List<String> lines = new java.util.ArrayList<>();
         lines.add(title);
         lines.add(border);
-        lines.add(String.format(format, "Proceso", "Arrival", "Burst", "Start", "Finish", "Wait", "Turnaround", "Response"));
+        lines.add(String.format(format, "Process", "Arrival", "Burst", "Start", "Finish", "Wait", "Turnaround", "Response"));
         lines.add(border);
 
         if (schedule != null) {
