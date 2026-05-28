@@ -1,6 +1,7 @@
 package ShortJobFirst;
 
 public class ProcessSimulation implements ProcessWithRandomTime {
+    // Atributos para representar el proceso
     private int processTime;
     private String processName;
     private int arrivalTime;

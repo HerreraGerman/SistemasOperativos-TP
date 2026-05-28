@@ -2,6 +2,7 @@ package ShortJobFirst;
 
 public class ProcessResultTable {
 
+    // Tabla para mostrar los procesos sin programar (nombre, tiempo de llegada, tiempo de ráfaga)
     public static java.util.List<String> getBurstLines(ProcessSimulation[] processes, String title) {
         int nameWidth = "Process".length();
         int arrivalWidth = "Arrival".length();
@@ -42,6 +43,7 @@ public class ProcessResultTable {
         return lines;
     }
 
+    // Tabla para mostrar los procesos programados (nombre, tiempo de llegada, tiempo de ráfaga, tiempo de inicio, tiempo de finalización, tiempo de espera, tiempo de retorno y tiempo de respuesta)
     public static java.util.List<String> getScheduleLines(java.util.List<ProcessSimulation> schedule, String title) {
         int nameWidth = "Process".length();
         int arrivalWidth = "Arrival".length();
@@ -100,6 +102,7 @@ public class ProcessResultTable {
         return lines;
     }
 
+    // Método para imprimir las líneas de texto en la consola
     public static void printLines(java.util.List<String> lines) {
         if (lines == null) {
             return;
@@ -109,6 +112,7 @@ public class ProcessResultTable {
         }
     }
 
+    // Método para combinar dos listas de líneas en formato lado a lado
     public static java.util.List<String> getSideBySideLines(ProcessSimulation[] left, String leftTitle,
                                                             ProcessSimulation[] right, String rightTitle) {
         java.util.List<String> leftLines = getBurstLines(left, leftTitle);
